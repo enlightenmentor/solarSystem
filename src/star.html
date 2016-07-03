@@ -1,0 +1,13 @@
+<html><head><link rel="import" href="../bower_components/polymer/polymer.html">
+
+</head><body><dom-module id="star-object">
+  <template>
+    <style>:host{display:inline-block;position:absolute;border-radius:50%;z-index:1;}.body{display:inline-block;width:100%;height:100%;position:absolute;top:0;left:0;border-radius:50%;}</style>
+
+    <div class="body" id="sunbody"></div>
+    <content></content>
+
+  </template>
+
+  <script>Polymer({is:"star-object",properties:{diameter:{type:Number,notify:!0,reflectToAttribute:!0},colour:{type:String,notify:!0,reflectToAttribute:!0},rotation:{type:Number,notify:!0,reflectToAttribute:!0}},attached:function(){var t=this.parentNode.getAttribute("diameter"),e=this.$.sunbody;this.style.width=this.style.height=this.diameter+"px",this.style.top=this.style.left=(t-this.diameter)/2+"px",this.style.boxShadow="0px 0px "+this.diameter/20+"px "+this.diameter/100+"px "+this.colour,e.style.backgroundImage="-webkit-linear-gradient(#FFFFFF 10%, "+this.colour+")",e.style.backgroundImage="-moz-linear-gradient(#FFFFFF 10%, "+this.colour+")",e.style.backgroundImage="-ms-linear-gradient(#FFFFFF 10%, "+this.colour+")",e.style.backgroundImage="-o-linear-gradient(#FFFFFF 10%, "+this.colour+")",e.style.WebkitAnimation="Orbit "+this.rotation+"s linear infinite reverse",e.style.animation="Orbit "+this.rotation+"s linear infinite reverse"},attributeChanged:function(){var t=this.parentNode.getAttribute("diameter"),e=this.$.sunbody;this.style.width=this.style.height=this.diameter+"px",this.style.top=this.style.left=(t-this.diameter)/2+"px",this.style.boxShadow="0px 0px "+this.diameter/20+"px "+this.diameter/100+"px "+this.colour,e.style.backgroundImage="-webkit-linear-gradient(#FFFFFF 10%, "+this.colour+")",e.style.backgroundImage="-moz-linear-gradient(#FFFFFF 10%, "+this.colour+")",e.style.backgroundImage="-ms-linear-gradient(#FFFFFF 10%, "+this.colour+")",e.style.backgroundImage="-o-linear-gradient(#FFFFFF 10%, "+this.colour+")",e.style.WebkitAnimation="Orbit "+this.rotation+"s linear infinite reverse",e.style.animation="Orbit "+this.rotation+"s linear infinite reverse"}});</script>
+</dom-module></body></html>

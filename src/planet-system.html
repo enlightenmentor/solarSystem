@@ -1,0 +1,13 @@
+<html><head><link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="star-object.html">
+
+</head><body><dom-module id="planet-system">
+  <template>
+    <style>:host{display:inline-block;position:absolute;top:0;left:0;background-image:url('../img/startile.gif');background-size:256px;background-repeat:repeat;z-index:0;}</style>
+
+    <content></content>
+
+  </template>
+
+  <script>Polymer({is:"planet-system",properties:{diameter:{type:Number,notify:!0,reflectToAttribute:!0}},attached:function(){this.style.width=this.style.height=this.diameter+"px"},attributeChanged:function(){this.style.width=this.style.height=this.diameter+"px"}});</script>
+</dom-module></body></html>

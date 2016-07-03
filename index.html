@@ -1,0 +1,47 @@
+<!DOCTYPE html><html><head>
+    <title>solar-system</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="src/planet-system.html">
+    <link rel="import" href="src/star.html">
+    <link rel="import" href="src/planet.html">
+    <link rel="import" href="src/satellite.html">
+    <style>@-webkit-keyframes Orbit{from{-webkit-transform:rotate(0deg);}to{-webkit-transform:rotate(-360deg);}}@keyframes Orbit{from{-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg);}to{-moz-transform:rotate(-360deg);-ms-transform:rotate(-360deg);transform:rotate(-360deg);}}p.name{position:relative;top:-40%;left:40%;color:#fff;text-align:right;font-family:sans-serif;font-size:8px;}</style>
+  </head>
+  <body>
+    <planet-system id="solarSystem" diameter="17000">
+      <star-object id="Sun" diameter="1090" colour="#F6FC00" rotation="2.5">
+        <planet-object id="Mercury" diameter="3.8" distance="387" colour="#d4c99c" rotation="5.9" orbit="8.8"></planet-object>
+        <planet-object id="Venus" diameter="9.5" distance="723" colour="#c18f17" rotation="24.3" orbit="22.5"></planet-object>
+        <planet-object id="Earth" diameter="10" distance="1000" colour="#4f4cb0" rotation="0.1" orbit="36.5">
+          <satellite-object id="Moon" diameter="2.7" distance="2.6" colour="#91a3b0" rotation="0.04" orbit="433.2"></satellite-object>
+        </planet-object>
+        <planet-object id="Mars" diameter="5.3" distance="1524" colour="#c1440e" rotation="0.1" orbit="68.7"></planet-object>
+        <planet-object id="Jupiter" diameter="109.7" distance="5204" colour="#c99039" rotation="0.04" orbit="433.2">
+          <satellite-object id="Ganymede" diameter="4.1" distance="7.2" colour="#585149" rotation="0.7" orbit="0.7"></satellite-object>
+          <satellite-object id="Callisto" diameter="3.8" distance="12.6" colour="#3E4141" rotation="1.6" orbit="1.6"></satellite-object>
+          <satellite-object id="Io" diameter="2.8" distance="2.8" colour="#B99837" rotation="0.2" orbit="0.2"></satellite-object>
+          <satellite-object id="Europe" diameter="2.4" distance="4.5" colour="#636E7C" rotation="0.4" orbit="0.4"></satellite-object>
+        </planet-object>
+        <planet-object id="Saturn" diameter="91.4" distance="9682" colour="#bfbdaf" rotation="0.05" orbit="1075.9">
+          <satellite-object id="Titan" diameter="4.0" distance="8.2" colour="#F2CE6B" rotation="1.6" orbit="1.6"></satellite-object>
+          <satellite-object id="Rhea" diameter="1.2" distance="3.5" colour="#BEBEBE" rotation="0.5" orbit="0.5"></satellite-object>
+          <satellite-object id="Iapetus" diameter="1.2" distance="23.8" colour="#555555" rotation="0.5" orbit="0.5"></satellite-object>
+          <satellite-object id="Dione" diameter="0.8" distance="2.5" colour="#C0C0C0" rotation="0.3" orbit="0.3"></satellite-object>
+          <satellite-object id="Tethys" diameter="0.8" distance="2.0" colour="#D4D4D4" rotation="0.2" orbit="0.2"></satellite-object>
+        </planet-object>
+        <planet-object id="Uranus" diameter="39.8" distance="19229" colour="#c6d3e3" rotation="0.1" orbit="3068.5">
+          <satellite-object id="Titania" diameter="1.2" distance="2.9" colour="#887F7C" rotation="0.9" orbit="0.9"></satellite-object>
+          <satellite-object id="Oberon" diameter="1.2" distance="3.9" colour="#AE9D93" rotation="1.3" orbit="1.3"></satellite-object>
+          <satellite-object id="Umbriel" diameter="0.9" distance="1.8" colour="#474747" rotation="0.4" orbit="0.4"></satellite-object>
+          <satellite-object id="Ariel" diameter="0.9" distance="1.3" colour="#A9A9A9" rotation="0.25" orbit="0.25"></satellite-object>
+        </planet-object>
+        <planet-object id="Neptune" diameter="38.6" distance="30104" colour="#5b5ddf" rotation="0.07" orbit="6019">
+          <satellite-object id="Triton" diameter="2.1" distance="2.4" colour="#786A61" rotation="0.6" orbit="0.6" way="normal"></satellite-object>
+        </planet-object>
+      </star-object>
+    </planet-system>
+  
+
+</body></html>
